@@ -1,3 +1,4 @@
+
 const parallax = document.getElementById("introduction");
 
 mobile();
@@ -48,32 +49,6 @@ function tablet(){
     }
 }
 
-/*
-laptop();
-function laptop(){
-
-    const mql = window.matchMedia('screen and (min-width: 1000px) and (max-width: 1199px)');
-
-    checkMedia(mql);
-    mql.addListener(checkMedia);
-
-    function checkMedia(mql){
-
-        if(mql.matches){
-        	parallax.style.backgroundPosition = "top left";
-            let offset = window.pageYOffset;
-			parallax.style.backgroundPositionY = (offset - 90) + "px";
-
-			window.addEventListener("scroll", function(){
-			let offsetAgain = window.pageYOffset;
-
-			parallax.style.backgroundPositionY = (offsetAgain - 300) * 0.3 + "px";
-			})
-        }
-    }
-}
-*/
-
 desktop();
 function desktop(){
 
@@ -87,17 +62,13 @@ function desktop(){
         if(mql.matches){
         	parallax.style.backgroundPosition = "top left";
             let offset = window.pageYOffset;
-			parallax.style.backgroundPositionY = (offset - 200) + "px";
+			parallax.style.backgroundPositionY = (offset - 225) + "px";
 
 			window.addEventListener("scroll", function(){
 			let offsetAgain = window.pageYOffset;
 
-			parallax.style.backgroundPositionY = (offsetAgain - 675) * 0.3 + "px";
+			parallax.style.backgroundPositionY = (offsetAgain - 750) * 0.3 + "px";
 			})
         }
     }
 }
-
-
-
-

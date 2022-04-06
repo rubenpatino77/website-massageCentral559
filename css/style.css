@@ -11,12 +11,12 @@
 	--fw-reg: 300;
 	--fw-bold: 900;
 
-	--clr-grey: #F4F2F3;
+	--clr-grey: #E5E3C9;
 	--clr-white: #ffffff;
 	--clr-black: #000000;
-	--clr-darkAccent: #1D3124;
-	--clr-accent1: #E59560;
-	--clr-accent2: #BACEC1;
+	--clr-darkAccent: #789395;
+	--clr-accent1: #B4CFB0;
+	--clr-accent2: #94B49F;
 
 	--fs-h1: 3rem;
 	--fs-h2: 2.25rem;
@@ -79,7 +79,8 @@ strong {
 	position: relative;
 	top: 0px;
 	left: 5%;
-	color: var(--clr-accent2);
+	color: var(--clr-black);
+	font-weight: var(--fw-bold);
 }
 
 .social-list {
@@ -140,17 +141,26 @@ nav a::after {
 	transform: scaleX(0);
 	transition: transform 0.4s ease;
 	transform-origin: bottom right;
-	background-color: var(--clr-accent1);
+	background-color: var(--clr-black);
 }
 
 nav a:hover::after {
 	transform-origin: bottom left;
 	transform: scaleX(1);
+
 }
 
 #company-logo {
 	max-height: 7rem;
 	margin: -1rem auto -2rem;
+}
+
+.nav-button {
+	font-weight: var(--fw-bold);
+}
+
+.nav-button:hover {
+	transform: scale(1.2);
 }
 
 .nav-list {
@@ -161,7 +171,6 @@ nav a:hover::after {
 	align-items: center;
 	margin-left: 10%;
 	font-size: var(--fs-body);
-	font-weight: var(--fw-bold);
 }
 
 @media (max-width: 750px) {
@@ -178,11 +187,11 @@ nav a:hover::after {
 }
 
 .intro {
-	background-image: url(../photos/introPhoto.jpg);
+	background-image: url(../photos/introImage.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding: 7rem 0 7rem;
-	color: var(--clr-accent1);
+	padding: 7rem 0;
+	color: var(--clr-black);
 	text-align: right;
 }
 
@@ -190,23 +199,41 @@ nav a:hover::after {
 	display: block;
 }
 
-.intro-heading, .intro-statement {
+.intro-heading,
+.intro-statement {
 	margin-left: 55%;
 	margin-right: 1rem;
 	text-align: center;
 }
 
-.benefits {
-	background-image: url(../photos/whyUsPic.jpg);
-	background-size: cover;
-	position: relative;
-	color: var(--clr-accent1);
-	text-align: center;
-	padding: 10% 15%;
-	box-shadow: 0 3000px rgba(0, 0, 0, 0.6) inset;
+.intro-statement{
+	margin-bottom: 5rem;
 }
 
-.benefits-statement-button {
+.intro-appointment-button {
+	margin-right: 15%;
+	border: solid;
+	padding: 1rem;
+	border-color: var(--clr-black);
+	color: var(--clr-black);
+	width: 100%;
+}
+
+.intro-appointment-button:hover{
+	transform: scale(1.2);
+}
+
+.benefits {
+	background-image: url(../photos/benefits.jpg);
+	background-size: cover;
+	position: relative;
+	color: var(--clr-black);
+	text-align: center;
+	padding: 10% 15%;
+	box-shadow: 0 3000px rgba(255, 255, 255, 0.6) inset;
+}
+
+.benefits-button-statement {
 	margin-top: 4rem;
 }
 
@@ -214,115 +241,142 @@ nav a:hover::after {
 	display: inline-block;
 	border-radius: 40%;
 	padding: 1rem;
-	margin: 1rem;
-	background: var(--clr-accent2);
-	color: var(--clr-darkAccent);
+	margin-top: 2rem;
+	background: var(--clr-white);
+	color: var(--clr-black);
 	text-decoration: none;
 	cursor: pointer;
-	font-size: 0.8rem;
+	font-size: 1rem;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: var(--fw-bold);
 	transition: transform 200ms ease-in-out;
+	border: solid;
+	border-color: var(--clr-darkAccent);
 }
 
 .benefits-button:hover {
 	transform: scale(1.2);
 }
 
-footer {
-	height: 30rem;
-	background-image: url(../photos/blackDesign.jpg);
+.home-footer {
+	background-image: url(../photos/footer.jpg);
+	box-shadow: 0 3000px rgba(255, 255, 255, 0.9) inset;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
   	justify-content: center;
   	position: relative;
+  	padding: 5%;
 }
 
 .email-container {
-	background-color: var(--clr-darkAccent);
-	position: absolute;
-	top: auto;
-	right: 10%;
-	left: 10%;
-	bottom: auto;
+	border: solid 3px var(--clr-darkAccent);
+	position: relative;
+	background-color: var(--clr-white);
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	padding: 5%;
+	width: 80%;
 }
 
-.email-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: var(--clr-accent2);
+.email-container h1 {
+	align-self: center;
+}
+
+.underline {
+	border-bottom: solid 2px var(--clr-black);
+	margin: 1rem auto 3rem;
+	width: 10%;
+}
+
+.name {
+	float: left;
+	width: 45%;
+}
+
+.telephone {
+  width: 45%;
+  float: right;
+}
+
+.email,
+.subject {
 	width: 100%;
 }
 
-.users-name, 
-.users-email, 
-.users-message {
-	align-self: stretch;
-	margin: 1rem 10% 1rem;
+textarea {
+	line-height: 150%;
+	resize: none;
+  	width: 100%;
 }
 
-.users-message {
-	padding-bottom: 3rem;
+#name-input,
+#email-input,
+#phone-input,
+#subject-input,
+#message-input{
+  	border: none;
+	padding: 1rem 0;
+	background-color: transparent;
+	outline: none;
+	border-bottom: solid;
+	border-color: rgba(0, 0, 0, 0.4);
+	width: 100%;
 }
 
-@media (min-width: 1000px) {
-	.email-container {
-		margin: auto 10%;
-	}
-
-	.users-name, 
-	.users-email, 
-	.users-message {
-		margin: 1rem 15% 1rem;
-	}
-}
-
-.email-button {
-	margin: 1.5rem;
-}
-
-footer ul {
-	margin: auto;
-	justify-content: center;
-	align-content: center;
+.submit {
+	width: 100%;
 	display: flex;
-	list-style: none;
+}
+#form-button {
+	border: solid;
+	padding: 1rem 1rem;
+	background-color: transparent;
+	outline: none;
+	border-color: rgba(0, 0, 0, 0.4);
+	width: 20%%;
+	margin: 1rem auto 0;
 }
 
-.footer-contact {
+#form-button:hover {
+	transform: scale(1.1);
+	background-color: var(--clr-darkAccent);
+}
+
+.form-socials {
+	display: inline-flex;
+	position: relative;
+	height: 1rem;
+	width: 100%;
+}
+
+.form-phone-number {
 	position: absolute;
-	bottom: 2%;
-	right: 10%;
 	left: 10%;
-	display: grid;
-	grid-column-gap: 1em;
-	grid-template-areas:
-		"number nothing list";
 }
 
-@media (min-width: 1000px) {
-	.footer-contact {
-		margin: auto 10%;
-	}
+.form-social-list {
+	list-style: none;
+	position: absolute;
+    right: 10%;
 }
 
-.footer-phone-number {
-	color: var(--clr-white);
-	grid-area: number;
-	margin-left: 5%;
+#form-insta-logo img {
+    max-height: 1.5rem;
 }
 
-.footer-social-list {
-	grid-area: list;
-	margin-right: 5%;
+#form-insta-logo img:hover {
+	transform: scale(1.2);
 }
+
+
+
+
+
+
+
 
 
 
@@ -335,5 +389,133 @@ footer ul {
 
 /*servicesPage.html*/
 
+.services-section {
+	background: url(../photos/subPage.jpg) repeat fixed;
+	background-size: cover;
+	background-position: 50% 70%;
+	padding-top: 3rem;
+}
 
+.services-intro-heading {
+	font-weight: var(--fw-reg);
+	padding: 5rem auto;
+	text-align: center;
+}
+
+.services-intro-heading strong {
+	display: block;
+}
+
+.services-intro-statement {
+	padding: 1rem 15% 5rem;
+	text-align: center;
+}
+
+.services-container {
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 2rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.all-services {
+	padding: 2rem 7rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 5rem 10rem;
+}
+
+.service {
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.7);
+	box-shadow: var(--bs);
+	color: var(--clr-white);
+}
+
+.service:hover {
+	transform: scale(1.5);
+}
+
+.services-contact-button-title {
+	padding: 1rem 20%;
+	
+}
+
+.services-contact-button {
+	width: 10rem;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	border: solid;
+	border-color: var(--clr-black);
+	padding: 1rem 1rem;
+	background-color: var(--clr-accent1);
+	outline: none;
+	color: var(--clr-black);
+}
+
+.services-contact-button:hover {
+	transform: scale(1.1);
+}
+
+.services-footer {
+	background-image: url(../photos/footer.jpg);
+	box-shadow: 0 3000px rgba(255, 255, 255, 0.9) inset;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+  	padding: 1rem;
+  	position: relative;
+  	width: 100%;
+
+}
+
+.foot-title,
+.footer-address,
+.footer-city,{
+	margin-bottom: 0;
+}
+
+.footer-contact {
+	padding-bottom: 1rem;
+}
+
+.footer-phone-number {
+	color: var(--clr-black);
+	font-weight: var(--fw-bold);
+}
+
+.footer-social-list {
+	list-style: none;
+}
+
+.footer-nav {
+	position: absolute;
+	right: 3%;
+	top: 0;
+	outline: none;
+	color: var(--clr-black);
+}
+
+.footer-nav-list {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.footer-nav-button {
+	display: block;
+	text-align: center;
+	margin: 0.5rem auto;
+}
+
+.footer-nav-button:hover {
+	transform: scale(1.1);
+}
+
+.footer-nav-button a {
+	color: var(--clr-black);
+}
 
