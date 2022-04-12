@@ -155,6 +155,14 @@ nav a:hover::after {
 	margin: -1rem auto -2rem;
 }
 
+.hamburger-menu {
+	width: 100%;
+}
+
+#menu-toggle {
+	display: none;
+}
+
 .nav-button {
 	font-weight: var(--fw-bold);
 }
@@ -165,12 +173,12 @@ nav a:hover::after {
 
 .nav-list {
 	list-style: none;
-	column-gap: 5%;
 	flex-grow: 1;
 	display: flex;
-	align-items: center;
-	margin-left: 10%;
+	column-gap: 5%;
+	padding: 0 5% 0 10%;
 	font-size: var(--fs-body);
+	justify-content: space-around;
 }
 
 @media (max-width: 750px) {
@@ -186,13 +194,26 @@ nav a:hover::after {
 	}
 }
 
+.menu__item{
+	justify-content: space-around;
+}
+
 .intro {
 	background-image: url(../photos/introImage.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding: 7rem 0;
+	padding: 7rem 1rem;
 	color: var(--clr-black);
-	text-align: right;
+	transform:scale(1.0);
+}
+
+.intro-items {
+	width: 100%;
+	padding-left: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .intro-heading strong {
@@ -200,27 +221,112 @@ nav a:hover::after {
 }
 
 .intro-heading,
-.intro-statement {
-	margin-left: 55%;
-	margin-right: 1rem;
-	text-align: center;
-}
-
 .intro-statement{
-	margin-bottom: 5rem;
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 .intro-appointment-button {
-	margin-right: 15%;
+	width: fit-content;
 	border: solid;
 	padding: 1rem;
 	border-color: var(--clr-black);
 	color: var(--clr-black);
-	width: 100%;
+	border-radius: 15px;
+	box-shadow: var(--bs);
+	display: inline-block;
+	transition: transform 300ms ease-in-out;
+}
+.intro-appointment-button:hover {
+	transform: scale(1.2);
+	background: var(--clr-accent2);
 }
 
-.intro-appointment-button:hover{
-	transform: scale(1.2);
+@media (max-width: 570px) {
+
+	.intro-items {
+		padding: 0 15%;
+	}
+
+	#menu-toggle {
+	  opacity: 0;
+	}
+
+	#menu-toggle:checked + .menu__btn > span {
+	  transform: rotate(45deg);
+	}
+
+	#menu-toggle:checked + .menu__btn > span::before {
+	  top: 0;
+	  transform: rotate(0deg);
+	}
+
+	#menu-toggle:checked + .menu__btn > span::after {
+	  top: 0;
+	  transform: rotate(90deg);
+	}
+
+	#menu-toggle:checked ~ .menu__box {
+	  left: 50% !important;
+	}
+
+	.menu__btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		width: 26px;
+		height: 26px;
+		cursor: pointer;
+		z-index: 3;
+	}
+
+	.menu__btn > span,
+	.menu__btn > span::before,
+	.menu__btn > span::after {
+	  display: block;
+	  position: absolute;
+	  width: 100%;
+	  height: 2px;
+	  background-color: #616161;
+	  transition-duration: .35s;
+	}
+
+	.menu__btn > span::before {
+	  content: '';
+	  top: -8px;
+	}
+
+	.menu__btn > span::after {
+	  content: '';
+	  top: 8px;
+	}
+
+	.menu__box {
+	  display: block;
+	  position: fixed;
+	  top: 0;
+	  left: 100%;
+	  width: 300px;
+	  height: 100%;
+	  margin: 0;
+	  padding: 80px 0;
+	  list-style: none;
+	  background-color: #ECEFF1;
+	  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+	  transition-duration: .35s;
+	}
+
+	.menu__item {
+	  display: block;
+	  padding: 12px 24px;
+	  color: #333;
+	  text-decoration: none;
+	  transition-duration: .25s;
+	}
+
+	.menu__item:hover {
+	  background-color: #CFD8DC;
+	}	
 }
 
 .benefits {
@@ -250,18 +356,21 @@ nav a:hover::after {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: var(--fw-bold);
-	transition: transform 200ms ease-in-out;
+	transition: transform 300ms ease-in-out;
 	border: solid;
 	border-color: var(--clr-darkAccent);
+	box-shadow: var(--bs);
 }
 
 .benefits-button:hover {
 	transform: scale(1.2);
+	background-color: var(--clr-accent2);
+	border-color: var(--clr-black);
 }
 
 .home-footer {
 	background-image: url(../photos/footer.jpg);
-	box-shadow: 0 3000px rgba(255, 255, 255, 0.9) inset;
+	box-shadow: 0 3000px rgba(220, 220, 220, 0.9) inset;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -338,6 +447,8 @@ textarea {
 	border-color: rgba(0, 0, 0, 0.4);
 	width: 20%%;
 	margin: 1rem auto 0;
+	border-radius: 15px;
+	transition: transform 200ms ease-in-out;
 }
 
 #form-button:hover {
@@ -355,6 +466,8 @@ textarea {
 .form-phone-number {
 	position: absolute;
 	left: 10%;
+	color: var(--clr-black);
+	font-weight: var(--fw-bold);
 }
 
 .form-social-list {
@@ -387,12 +500,16 @@ textarea {
 
 
 
+
+
+
+
 /*servicesPage.html*/
 
 .services-section {
 	background: url(../photos/subPage.jpg) repeat fixed;
 	background-size: cover;
-	background-position: 50% 70%;
+	background-position: 50% 60%;
 	padding-top: 3rem;
 }
 
@@ -412,7 +529,7 @@ textarea {
 }
 
 .services-container {
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.8);
 	padding: 2rem 0;
 	display: flex;
 	flex-direction: column;
@@ -421,11 +538,18 @@ textarea {
 }
 
 .all-services {
-	padding: 2rem 7rem;
+	padding: 2rem 8rem;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(15rem, max-content));
 	grid-template-rows: repeat(2, 1fr);
-	grid-gap: 5rem 10rem;
+	grid-gap: 5rem 8rem;
+	justify-content: center;
+}
+
+@media (max-width: 570px) {
+	.all-services {
+		padding: 1rem 0;
+	}
 }
 
 .service {
@@ -433,19 +557,22 @@ textarea {
 	background-color: rgba(0, 0, 0, 0.7);
 	box-shadow: var(--bs);
 	color: var(--clr-white);
+	min-width: 20rem;
+	border-radius: 15px;
 }
 
 .service:hover {
-	transform: scale(1.5);
+	transform: scale(1.3);
 }
 
 .services-contact-button-title {
-	padding: 1rem 20%;
+	padding: 3rem 20%;
 	
 }
 
 .services-contact-button {
 	width: 10rem;
+	border-radius: 15px;
 	margin: 0 auto;
 	margin-bottom: 2rem;
 	border: solid;
@@ -454,10 +581,11 @@ textarea {
 	background-color: var(--clr-accent1);
 	outline: none;
 	color: var(--clr-black);
+	box-shadow: var(--bs);
 }
 
 .services-contact-button:hover {
-	transform: scale(1.1);
+	transform: scale(1.15);
 }
 
 .services-footer {
@@ -469,13 +597,20 @@ textarea {
   	padding: 1rem;
   	position: relative;
   	width: 100%;
-
+  	column-gap: 10rem;
+  	flex-wrap: nowrap;
+  	justify-content: space-between;
 }
 
-.foot-title,
+.footer-title {
+	margin-top: 1rem;
+}
+
+.footer-title,
 .footer-address,
-.footer-city,{
-	margin-bottom: 0;
+.footer-city{
+	margin: 0 0 1.5rem 0;
+
 }
 
 .footer-contact {
@@ -485,10 +620,14 @@ textarea {
 .footer-phone-number {
 	color: var(--clr-black);
 	font-weight: var(--fw-bold);
+	margin: 0;
+	padding-bottom: 1rem;
 }
 
 .footer-social-list {
 	list-style: none;
+	margin: 0 inherit;
+	padding: 0 inherit;
 }
 
 .footer-nav {

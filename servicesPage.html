@@ -30,18 +30,24 @@
 	</header>
 
 	<nav>
-		<a href="index.html" class="nav-button">
-			<img src="photos/companyLogo.png" alt="Company Logo" id="company-logo">
-		</a>
+			<a href="index.html" class="nav-button">
+				<img src="photos/companyLogo.png" alt="Company Logo" id="company-logo">
+			</a>
 
-		<ul class="nav-list">
-			<li class="nav-button"><a href="servicesPage.html">Services</a></li>
-			<li class="nav-button"><a href="">Happy Customers</a></li>
-			<li class="nav-button"><a href="">About</a></li>
-			<li class="nav-button"><a href="">Goals</a></li>
-			<li class="nav-button"><a href="index.html#contact">Contact Us</a></li>
-		</ul>
-	</nav>
+			<div class="hamburger-menu">
+				<input id="menu-toggle" type="checkbox" />
+				<label class="menu__btn" for="menu-toggle">
+			      <span></span>
+			    </label>
+				<ul class="nav-list menu__box" id="myLinks">
+					<li class="nav-button menu__item"><a href="servicesPage.html">Services</a></li>
+					<li class="nav-button menu__item"><a href="">Happy Customers</a></li>
+					<li class="nav-button menu__item"><a href="">About</a></li>
+					<li class="nav-button menu__item"><a href="">Goals</a></li>
+					<li class="nav-button menu__item"><a href="index.html#contact">Contact Us</a></li>
+				</ul>
+			</div>
+		</nav>
 
 	<section class="services-section">
 		<h1 class="services-intro-heading">Services at <strong>Massage Central 559!</strong></h1>
@@ -88,7 +94,7 @@
 
 <footer class="services-footer">
 	<h3 class="footer-title"><strong>Massage Central 559</strong></h3>
-	<p class="footer-address"> 123 Example st.</p>
+	<p class="footer-address">123 Example st.</p>
 	<p class="footer-city">Visalia, CA 93277</p>
 	<div class="footer-contact">
 		<p class="footer-phone-number">(559)-123-4567</p>
