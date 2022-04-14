@@ -68,6 +68,34 @@ strong {
 	font-weight: var(--fw-bold);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NAVIGATION BAR */
+
 .intro-contact {
 	display: flex;
 	position: relative;
@@ -199,55 +227,7 @@ nav a:hover::after {
 	justify-content: space-around;
 }
 
-.intro {
-	background-image: url(../photos/introImage.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	padding: 7rem 1rem;
-	color: var(--clr-black);
-	transform:scale(1.0);
-}
-
-.intro-items {
-	width: 100%;
-	padding-left: 50%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.intro-heading strong {
-	display: block;
-}
-
-.intro-heading,
-.intro-statement{
-	text-align: center;
-	margin-bottom: 1rem;
-}
-
-.intro-appointment-button {
-	width: fit-content;
-	border: solid;
-	padding: 1rem;
-	border-color: var(--clr-black);
-	color: var(--clr-black);
-	border-radius: 15px;
-	box-shadow: var(--bs);
-	display: inline-block;
-	transition: transform 300ms ease-in-out;
-}
-.intro-appointment-button:hover {
-	transform: scale(1.2);
-	background: var(--clr-accent2);
-}
-
 @media (max-width: 650px) {
-
-	.intro-items {
-		padding: 0 15%;
-	}
 
 	#menu-toggle {
 	  opacity: 0;
@@ -328,6 +308,84 @@ nav a:hover::after {
 	.menu__item:hover {
 	  background-color: #CFD8DC;
 	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HOME PAGE */
+
+.intro {
+	background-image: url(../photos/introImage.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 7rem 1rem;
+	color: var(--clr-black);
+	transform:scale(1.0);
+}
+
+.intro-items {
+	width: 100%;
+	padding-left: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 650px) {
+
+	.intro-items {
+		padding: 0 15%;
+	}
+}
+
+.intro-heading strong {
+	display: block;
+}
+
+.intro-heading,
+.intro-statement{
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.intro-appointment-button {
+	width: fit-content;
+	border: solid;
+	padding: 1rem;
+	border-color: var(--clr-black);
+	color: var(--clr-black);
+	border-radius: 15px;
+	box-shadow: var(--bs);
+	display: inline-block;
+	transition: transform 300ms ease-in-out;
+}
+
+.intro-appointment-button:hover {
+	transform: scale(1.2);
+	background: var(--clr-accent2);
 }
 
 .benefits {
@@ -517,31 +575,38 @@ textarea {
 
 
 
-/*servicesPage.html*/
 
-.services-section {
+
+
+
+
+
+
+/* MAIN SETUP FOR ALL SUBPAGES (NOT HOME PAGE) */
+
+.body-section {
 	background: url(../photos/subPage.jpg) repeat fixed;
 	background-size: cover;
 	background-position: 50% 60%;
 	padding-top: 3rem;
 }
 
-.services-intro-heading {
+.body-intro-heading {
 	font-weight: var(--fw-reg);
 	padding: 5rem auto;
 	text-align: center;
 }
 
-.services-intro-heading strong {
+.body-intro-heading strong {
 	display: block;
 }
 
-.services-intro-statement {
+.body-intro-statement {
 	padding: 1rem 15% 5rem;
 	text-align: center;
 }
 
-.services-container {
+.body-content {
 	background-color: rgba(255, 255, 255, 0.8);
 	padding: 2rem 0;
 	display: flex;
@@ -550,58 +615,17 @@ textarea {
 	text-align: center;
 }
 
-.all-services {
-	padding: 2rem 6rem;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(15rem, 20rem));
-	grid-template-rows: repeat(2, 1fr);
-	grid-gap: 5rem 8rem;
-	justify-content: center;
-}
 
-@media (max-width: 570px) {
-	.all-services {
-		padding: 1rem 0;
-	}
-}
 
-.service {
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.7);
-	box-shadow: var(--bs);
-	color: var(--clr-white);
-	min-width: 20rem;
-	border-radius: 15px;
-}
 
-.service:hover {
-	transform: scale(1.4);
-}
 
-.services-contact-button-title {
-	padding: 3rem 20%;
-	
-}
 
-.services-contact-button {
-	width: 10rem;
-	border-radius: 15px;
-	margin: 0 auto;
-	margin-bottom: 2rem;
-	border: solid;
-	border-color: var(--clr-black);
-	padding: 1rem 1rem;
-	background-color: var(--clr-accent1);
-	outline: none;
-	color: var(--clr-black);
-	box-shadow: var(--bs);
-}
 
-.services-contact-button:hover {
-	transform: scale(1.15);
-}
 
-.services-footer {
+
+/* FOOTER FOR ALL SUBPAGES (NOT HOME PAGE) */
+
+.subpage-footer {
 	background-image: url(../photos/footer.jpg);
 	box-shadow: 0 3000px rgba(255, 255, 255, 0.9) inset;
 	background-size: cover;
@@ -690,6 +714,100 @@ textarea {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*servicesPage.html*/
+
+.all-services {
+	padding: 2rem 6rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 20rem));
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 5rem 8rem;
+	justify-content: center;
+}
+
+@media (max-width: 570px) {
+	.all-services {
+		padding: 1rem 0;
+	}
+}
+
+.service {
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.7);
+	box-shadow: var(--bs);
+	color: var(--clr-white);
+	min-width: 20rem;
+	border-radius: 15px;
+}
+
+.service:hover {
+	transform: scale(1.4);
+}
+
+.services-contact-button-title {
+	padding: 3rem 20%;
+	
+}
+
+.services-contact-button {
+	width: 10rem;
+	border-radius: 15px;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	border: solid;
+	border-color: var(--clr-black);
+	padding: 1rem 1rem;
+	background-color: var(--clr-accent1);
+	outline: none;
+	color: var(--clr-black);
+	box-shadow: var(--bs);
+}
+
+.services-contact-button:hover {
+	transform: scale(1.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* happyCustomersPage.html */
 .customers-intro-heading {
 	padding-top: 4rem;
@@ -712,6 +830,37 @@ textarea {
 	border-radius: 15px;
 }
 
+.all-happy-customers {
+	padding: 2rem 6rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 20rem));
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 5rem 8rem;
+	justify-content: center;
+}
+
+.happy-customers-contact-button-title {
+	padding: 3rem 20%;
+	
+}
+
+.happy-customers-contact-button {
+	width: 10rem;
+	border-radius: 15px;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	border: solid;
+	border-color: var(--clr-black);
+	padding: 1rem 1rem;
+	background-color: var(--clr-accent1);
+	outline: none;
+	color: var(--clr-black);
+	box-shadow: var(--bs);
+}
+
+.happy-customers-contact-button:hover {
+	transform: scale(1.15);
+}
 
 
 
@@ -725,7 +874,19 @@ textarea {
 
 
 
-/* About Page */
+
+
+
+
+
+
+
+
+
+
+
+
+/* aboutPage.html */
 .about-intro-heading {
 	padding-top: 4rem;
 }
@@ -770,6 +931,28 @@ textarea {
 	}
 }
 
+.about-contact-button-title {
+	padding: 3rem 20%;
+	
+}
+
+.about-contact-button {
+	width: 10rem;
+	border-radius: 15px;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	border: solid;
+	border-color: var(--clr-black);
+	padding: 1rem 1rem;
+	background-color: var(--clr-accent1);
+	outline: none;
+	color: var(--clr-black);
+	box-shadow: var(--bs);
+}
+
+.about-contact-button:hover {
+	transform: scale(1.15);
+}
 
 
 
@@ -787,8 +970,13 @@ textarea {
 
 
 
-/* Goals Page */
 
 
+
+/* goalsPage.html */
+
+.goals-container {
+	padding: 3rem 10%;
+}
 
 
