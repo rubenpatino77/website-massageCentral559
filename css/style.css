@@ -280,7 +280,7 @@ nav a:hover::after {
 	  display: block;
 	  position: fixed;
 	  top: 0;
-	  left: 100%;
+	  left: 105%;
 	  width: 300px;
 	  height: 100%;
 	  margin: 0;
@@ -427,8 +427,12 @@ nav a:hover::after {
 }
 
 .home-footer {
-	background-image: url(../photos/footer.jpg);
-	box-shadow: 0 3000px rgba(220, 220, 220, 0.9) inset;
+	background-image: 
+		linear-gradient(
+	      rgba(200, 200, 200, 0.9), 
+	      rgba(100, 100, 100, 0.9)
+	    ),
+		url(../photos/footer.jpg);
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -625,8 +629,13 @@ textarea {
 /* FOOTER FOR ALL SUBPAGES (NOT HOME PAGE) */
 
 .subpage-footer {
-	background-image: url(../photos/footer.jpg);
-	box-shadow: 0 3000px rgba(255, 255, 255, 0.9) inset;
+	background-image: 
+		linear-gradient(
+	      rgba(150, 150, 150, 0.9), 
+	      rgba(150, 150, 150, 0.9)
+	    ),
+		url(../photos/footer.jpg);
+	
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -719,8 +728,6 @@ textarea {
 .footer-nav-button a {
 	color: var(--clr-black);
 }
-
-
 
 
 
@@ -856,8 +863,8 @@ textarea {
 .image-container,
 .testimonial-container {
 	box-shadow: var(--bs);
-	width: 20rem;
-	height: 20rem;
+	width: 100%;
+	height: 100%;
 	border-radius: 15px;
 	text-align: center;
 }
