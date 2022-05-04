@@ -456,9 +456,12 @@ nav a:hover::after {
 	align-self: center;
 }
 
+.form-title {
+	max-width: 90%;
+}
+
 @media (max-width: 550px){
 	.email-container h1 {
-		transform: scale(0.8);
 		margin: 0;
 		padding: 0;
 	}
@@ -790,6 +793,12 @@ textarea {
 	transform: scale(1.4);
 }
 
+@media (max-width: 500px){
+	.service:hover {
+		transform: scale(1.2);
+	}
+}
+
 .services-contact-button-title {
 	padding: 3rem 20%;
 	font-weight: var(--fw-reg);
@@ -946,6 +955,7 @@ textarea {
 	width: 20rem;
 	margin: 0 5rem 5rem 0;
 	box-shadow: var(--bs);
+	max-width: 90%;
 }
 
 .about-container h2 {
