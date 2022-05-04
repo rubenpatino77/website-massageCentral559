@@ -1,4 +1,10 @@
 
+window.onload = function() {
+  if(window.location.href.indexOf("#contact") > -1) {
+        setTimeout(function () { document.getElementById("contact").scrollIntoView(true); }, 500);
+    }
+};
+
 const parallax = document.getElementById("introduction");
 
 mobile();
