@@ -247,12 +247,13 @@ nav a:hover::after {
 
 	.menu__btn {
 		position: absolute;
-		top: 2rem;
+		top: 1.25rem;
 		right: 2rem;
 		width: 26px;
 		height: 26px;
 		cursor: pointer;
 		z-index: 3;
+		padding-top: 1rem;
 	}
 
 	.menu__btn > span,
@@ -281,28 +282,34 @@ nav a:hover::after {
 	  position: fixed;
 	  top: 0;
 	  left: 105%;
-	  width: 300px;
+	  width: 55%;
 	  height: 100%;
 	  margin: 0;
 	  padding: 80px 0;
 	  list-style: none;
 	  background-color: #ECEFF1;
-	  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+	  box-shadow: -2px 0px 6px rgba(0, 0, 0, .4);
 	  transition-duration: .35s;
 	}
 
 	.menu__item {
-	  display: block;
-	  padding: 12px 24px;
-	  color: #333;
-	  text-decoration: none;
-	  transition-duration: .25s;
+		display: block;
+		padding: 12px 24px;
+		color: #333;
+		text-decoration: none;
+		transition-duration: .25s;
 	}
 
 	.menu__item:hover {
 	  background-color: #CFD8DC;
-	}	
+	  box-shadow: -2px 2px 6px rgba(0, 0, 0, .4);
+	}
+
+	.hamburger-menu {
+		width: 0;
+	}
 }
+
 
 
 

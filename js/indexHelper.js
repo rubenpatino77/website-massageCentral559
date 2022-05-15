@@ -1,4 +1,12 @@
 
+var checkbox = document.getElementById("menu-toggle");
+window.addEventListener('click', function(e){
+    if (!document.getElementById('myLinks').contains(e.target) 
+            && !document.getElementById('hamburger-menu').contains(e.target)){
+        checkbox.checked = false;
+    } 
+})
+
 window.onload = function() {
   if(window.location.href.indexOf("#contact") > -1) {
         setTimeout(function () { document.getElementById("contact").scrollIntoView(true); }, 500);
@@ -23,9 +31,9 @@ function mobile(){
 			parallax.style.backgroundPositionY = offset + "px";
 
 			window.addEventListener("scroll", function(){
-			let offsetAgain = window.pageYOffset;
+    			let offsetAgain = window.pageYOffset;
 
-			parallax.style.backgroundPositionY = offsetAgain * 0.3 + "px";
+    			parallax.style.backgroundPositionY = offsetAgain * 0.3 + "px";
 			})
         }
     }
@@ -47,9 +55,9 @@ function tablet(){
 			parallax.style.backgroundPositionY = offset + "px";
 
 			window.addEventListener("scroll", function(){
-			let offsetAgain = window.pageYOffset;
+    			let offsetAgain = window.pageYOffset;
 
-			parallax.style.backgroundPositionY = offsetAgain * 0.3 + "px";
+    			parallax.style.backgroundPositionY = offsetAgain * 0.3 + "px";
 			})
         }
     }
@@ -71,9 +79,9 @@ function desktop(){
 			parallax.style.backgroundPositionY = (offset - 225) + "px";
 
 			window.addEventListener("scroll", function(){
-			let offsetAgain = window.pageYOffset;
+    			let offsetAgain = window.pageYOffset;
 
-			parallax.style.backgroundPositionY = (offsetAgain - 750) * 0.3 + "px";
+    			parallax.style.backgroundPositionY = (offsetAgain - 750) * 0.3 + "px";
 			})
         }
     }
